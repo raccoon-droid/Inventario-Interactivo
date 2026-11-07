@@ -1,0 +1,152 @@
+/*================================*/
+        /*Hoja de Estilos*/
+/*================================*/
+:root{
+    /*Generales*/
+    --texto: #1d3935;
+    --titulos: #0A2A5E;
+    --tclaro: #fceee3;
+    --fondo:#bbd8ff;
+
+    /*Colores de la tabla*/
+    --filtros: #dee8f3;
+    --fila_a: #a4c6f5;
+    --fila_b: #7da2d6;
+    --hfila: #e2eeff;
+    --Thead:#0A2A5E;
+
+    /*Colores de los botones*/
+    --b: #f5ca56;
+    --botones: #ffe77c;
+    --g: #aceec4;
+    --guardar: #1B8F45;
+    --hguardar: #14602F;
+    --l: #b6d3f8;
+    --limpiar: #1558B0;
+}
+
+    /*Estilos del cuerpo de la página*/
+body{
+    background-color: var(--titulos);
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+header{
+    background-color: var(--titulos);
+    color: var(--tclaro);
+}
+
+main{
+    margin: 0;
+    padding: 1rem;
+    text-align: justify;
+    line-height: 1.6;
+    background-color: var(--fondo);
+    border-radius: 10px;
+}
+
+    /*Auto dimensionar los campos del formulario*/
+#marca, #modelo, #numeroSerie, #estado{
+    field-sizing: content;
+    min-height: 3rem;
+    min-width: 200px;
+    max-height: 300px;
+}
+
+    /*Estilos de los botones generales*/
+button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    text-align: center;
+    background-color: var(--b);
+    border-radius: 5px;
+    border: solid var(--botones);
+    transition: background-color 0.2s ease;
+}
+
+        /*Animación al pasar el puntero por encima*/
+button:hover{
+    background: var(--botones);
+    color: var(--texto)
+}
+
+    /*Estilos del botón de guardar*/
+#botonGuardar { 
+    padding: 1rem;
+    background: var(--g); 
+    color: var(--guardar); 
+    border-radius: 10px;
+    border: solid var(--guardar); 
+    transition: background-color 0.2s ease;
+}
+        /*Animación al pasar el puntero por encima*/
+#botonGuardar:hover { 
+    background: var(--guardar);
+    color: var(--tclaro);  
+}
+
+    /*Estilos del botón de limpiar campos*/
+#botonClear { 
+    padding: 1rem;
+    background: var(--l); 
+    color: var(--limpiar); 
+    border-radius: 10px;
+    border: solid var(--limpiar);
+    transition: background-color 0.2s ease; 
+}
+
+        /*Animación al pasar el puntero por encima*/
+#botonClear:hover { 
+    background: var(--limpiar);
+    color: var(--tclaro); 
+}
+
+    /*Estilos de las tablas*/
+table{
+    border-width: 5px;
+    border-style: solid;
+    width: 100%;
+}
+
+        /*Ajuste de los encabezados de las tablas*/
+thead{
+    text-align: center;
+}
+
+thead, th{
+    background-color: var(--Thead);
+    color: var(--tclaro);
+    text-align: center;
+}
+
+tbody, td{
+    padding: 0 1rem;
+    text-align: left;
+}
+
+tr {
+    background-color: var(--fila_a);
+}
+
+tr:nth-child(even) {
+    background-color: var(--fila_b);
+}
+
+tr:hover {
+    background-color: var(--hfila);
+}
+
+h2 {
+    color: var(--titulos);
+    border-bottom: 3px solid currentColor;  /* Toma el color del texto de cada título */
+    padding-bottom: 0.3rem;
+}
+
+.formulario{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
