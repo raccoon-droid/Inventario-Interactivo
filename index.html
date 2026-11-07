@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <!--==============================================================-->
+    <!--  Realizado por Fernando Rodríguez Medel                      -->
+    <!--==============================================================-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Computadoras</title>
+    <!--Se adjunta el archivo de la hoja de estilos-->
+    <link rel="stylesheet" href="recursos/stylesheet.css">
+    <!--Se adjunta el archivo del script usado en el inventario-->
+    <script src="recursos/inventario.js"></script>
+
+</head>
+<body>
+
+    <!--Título de la página-->
+    <header>
+        <h1>Inventario de computadoras</h1>
+    </header>
+<main>
+    <!--Mensaje de bienvenida-->
+    <p id = "Bienvenida" ></p>
+    <h2>Datos de la computadora:</h2>
+    <!--Formulario para guardar los datos en el registro-->
+    <form action="#">
+    
+        <!--Contendor padre-->
+        <div class="formulario">
+
+            <!--Campos de texto para registrar los datos-->
+            <div>
+                <h3>Marca:</h3>
+                <p><input id="marca" type="text" placeholder="Introduzca la Marca de la computadora ej. DELL"></p>
+            </div>
+        
+            <div>
+                <h3>Modelo:</h3>
+                <p><input id="modelo" type="text" placeholder="Introduzca el Modelo de la computadora ej. Optiplex 770"></p>
+            </div>
+
+            <div>
+                <h3>Numero de Serie:</h3>
+                <p><input id="numeroSerie" type="text" placeholder="Introduzca el Número de serie de la computadora ej. 03020304MXL"></p>
+            </div>
+
+            <div>
+                <h3>Estado:</h3>
+                <!--Lista desplegable de estados-->
+                <p>
+                    <select id="estado">
+                        <option value="">Seleccione el estado del dispositivo</option>
+                        <option value="ACTIVO">ACTIVO</option>
+                        <option value="EN INVENTARIO">EN INVENTARIO</option>
+                        <option value="DAÑADO">DAÑADO</option>
+                    </select>
+                </p>
+    
+            </div>
+
+            <div>
+                <!--Botones para guardar o limpiar los campos-->
+                <input type="button" value="Guardar" id="botonGuardar">
+                <input type="button" value="Limpiar campos" id="botonClear">
+            </div>
+        </div>
+
+    </form>
+    
+    <!--Titulo de la hoja de estilos-->
+    <h2>Registros en inventario</h2>
+    <!--Información presentada en una tabla-->
+    <div id="busquedas"></div>
+</main>
+
+</body>
+</html>
